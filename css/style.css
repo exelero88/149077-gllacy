@@ -17,8 +17,161 @@ h2 {
     font-weight: 700;
     line-height: 41px;
 }
-
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 .wrapper {
     background-color: #849d8f;     /*Цвет фона указан, чтобы был виден текст*/
     width: 100%;
+}
+.container {
+    width: 1146px;
+    margin: 0 auto;
+    padding-left: 27px;
+    padding-right: 27px;
+}
+/*************HEADER**************/
+.logo {
+    float: left;
+    padding-top: 9px;
+    padding-left: 2px;
+}
+.menu {
+    padding-top: 30px;
+    width: 349px;
+    float: left;
+}
+.menu__list {
+    margin: 0;
+    padding: 0;
+}
+.menu__item {
+    display: inline-block;
+}
+.submenu__list {
+    display: none;
+}
+.user-buttons {
+    float: right;
+    padding-top: 23px;
+}
+.user-buttons__hidden-field {
+    display: none;
+}
+
+.breadcrumbs {
+ margin-top: -30px;
+}
+.filter-ice-cream h2 {
+    margin: 0;
+}
+.form-select {
+    float:left;
+}
+.form-range {
+    float:left;
+}
+.form-radio {
+    float:left;
+}
+.form-checkbox {
+    float: left;
+    width: 879px;
+}
+/*************SLIDER**************/
+.slider h1 {
+    width: 670px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+/*************BANNERS**************/
+.banners-holder__col {
+    width: 560px;
+    padding-top: 40px;
+}
+.banners-holder__col_left {
+    float: left;
+}
+.banners-holder__col_right {
+    float:right;
+}
+.banner__title {
+    font-size: 35px;
+}
+/*************HITS**************/
+.hits__item {
+    float: left;
+    width: 267px;
+    margin-right: 26px;
+}
+.hits .hits__item:last-child {
+    float: right;
+    margin-right: 0;
+}
+.hits__price {
+    font-size: 45px;
+}
+/*************SEO**************/
+.seo__item {
+    display: inline-block;
+    width: 560px;
+}
+.seo__title {
+    font-size: 24px;
+    font-weight: 500;
+}
+/*************CONTENT**************/
+.content__col {
+    width: 560px;
+}
+.content__col_left {
+    float: left;
+}
+.content__col_right {
+    float: right;
+}
+.content__col a {
+    font-size: 24px;
+}
+/*************CATALOG**************/
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.good {
+    cursor: pointer;
+    width: 267px;
+}
+.price {
+    font-size: 45px;
+}
+.info {
+    font-size: 16px;
+}
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
+.page {
+
+}
+/*************FOOTER**************/
+.footer {
+    margin-top: 40px;
+}
+.footer-social {
+    width: 267px;
+    float: left;
+}
+.footer-about {
+    width: 330px;
+    float: left;
+}
+.footer-developers {
+    width: 267px;
+    float: right;
 }
