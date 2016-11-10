@@ -215,75 +215,77 @@ footer {
 /*==============================
            USER-BUTTONS
 ==============================*/
-.user-buttons {
-    position: relative;
+.user {
     float: right;
     padding-top: 23px;
 }
-.user-buttons__item {
-    display: inline-block;
-    height: 32px;
-    border-radius: 16px;
-    vertical-align: top;
-    cursor: pointer;
-    margin-right: 6px;
-    box-sizing: border-box;
-    vertical-align: middle;
-    line-height: 32px;
-}
-.user-buttons__item span {
-    opacity: 1;
-}
-.user-buttons__search {
+.user__item {
+    position: relative;
+    float: left;
+    margin-right: 10px;
     padding-bottom: 5px;
+}
+.user__item:last-child {
+    margin-right: 0;
+}
+.user__link {
+    display: block;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.3);
+    line-height: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+.user__search {
     width: 32px;
+    border-radius: 50%;
+    font-size: 0;
     background: rgba(255, 255, 255, 0.2) url("../img/icon-search.png") no-repeat 7px 7px;
 }
-.user-buttons__search:hover {
+.user__login {
+    width: 92px;
+    padding-left: 44px;
+    background: rgba(255, 255, 255, 0.2) url("../img/icon-enter.png") no-repeat 16px 6px;
+}
+.user__cart {
+    width: 117px;
+    padding-left: 45px;
+    background: rgba(255, 255, 255, 0.2) url("../img/icon-cart.png") no-repeat 16px 6px;
+}
+.user__search:hover {
     width: 32px;
     background: #f8f7f4 url("../img/icon-search-black.png") no-repeat 7px 7px;
 }
-.user-buttons__enter {
-    width: 92px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2) url("../img/icon-enter.png") no-repeat 16px 6px;
-    padding-left: 44px;
-}
-.user-buttons__enter:hover {
+.user__login:hover {
     background: #f8f7f4 url("../img/icon-enter-black.png") no-repeat 16px 6px;
     color: #323232;
 }
-.user-buttons__cart {
-    width: 117px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2) url("../img/icon-cart.png") no-repeat 16px 6px;
-    margin-right: 0;
-    padding-left: 44px;
-}
-.user-buttons__cart:hover {
-    width: 117px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2) url("../img/icon-cart.png") no-repeat 16px 6px;
-    margin-right: 0;
-    padding-left: 44px;
-}
-.user-buttons__cart--catalog {
+.user__cart--catalog {
     background: #f7f6f3 url("../img/icon-cart-full.png") no-repeat 16px 6px;
+    color: #323232;
+}
+.user__item:hover .user__search {
+    background: #f8f7f4 url("../img/icon-search-black.png") no-repeat 7px 7px;
+}
+.user__item:hover .user__login {
+    background: #f8f7f4 url("../img/icon-enter-black.png") no-repeat 16px 6px;
     color: #323232;
 }
 /*==============================
     ВСПЛЫВАЮЩАЯ ФОРМА ПОИСКА
 ==============================*/
 .search-field {
-    position: absolute;
     display: none;
+    position: absolute;
     top: 100%;
-    right: 228px;
-    z-index: 20
-}
-.search-wrapper {
-    padding: 20px 15px;
+    right: 0;
+    z-index: 20;
     background-color: #f8f7f4;
+    padding: 20px 15px;
     border-radius: 5px;
 }
 .search-field input[type="text"] {
@@ -297,28 +299,25 @@ footer {
     font-weight: 400;
     outline: none;
 }
-.user-buttons__search:hover + .search-field {
+.user__item:hover .search-field {
     display: block;
 }
 /*==============================
   ВСПЛЫВАЮЩЕЕ ОКНО АВТОРИЗАЦИИ
 ==============================*/
-.enter-wrapper {
-    display: none;
+.login-field {
     position: absolute;
-    top:  100%;
-    right: 130px;
-    z-index: 4;
-    width: 277px;
-    cursor: pointer;
-}
-.enter-field {
+    display: none;
     box-sizing: border-box;
     background-color: #f8f7f4;
     padding: 20px 15px 11px 19px;
     border-radius: 6px;
+    width: 277px;
+    top: 36px;
+    right: -2px;
+    z-index: 15;
 }
-.enter-field input[type="text"] {
+.login-field input[type="text"] {
     display: inline-block;
     border: 1px solid #d4d4d3;
     font-size: 14px;
@@ -329,14 +328,14 @@ footer {
     border-radius: 6px;
     margin-bottom: 20px;
 }
-.enter-field__btn {
+.login-field__btn {
     vertical-align: top;
     display: inline-block;
     padding: 0 25px 0;
     border-radius: 18px;
     height: 44px;
 }
-.enter-field__help {
+.login-field__help {
     vertical-align: top;
     display: inline-block;
     font-size: 13px;
@@ -345,16 +344,106 @@ footer {
     margin-left: 15px;
     margin-top: 0;
 }
-.enter-field__link {
+.login-field__link {
     color: #323232;
     text-decoration: none;
 }
-.enter-field__link span {
+.login-field__link span {
     border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
-.user-buttons__enter:hover +.enter-wrapper {
+.user__item:hover .login-field {
     display: block;
 }
+
+/*==============================
+  ВСПЛЫВАЮЩЕЕ ОКНО КОРЗИНА
+==============================*/
+.cart__table {
+    right: 0;
+    display: table;
+    position: absolute;
+    width: 540px;
+    color: #323232;
+    z-index: 15;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    background-color: #f8f7f4;
+    padding: 20px 15px 0 17px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.cart__table > ul {
+    display: table-row;
+}
+.cart__table  > ul > li {
+    display: table-cell;
+
+}
+.table__name {
+    box-sizing: border-box;
+    width: 286px;
+    padding-left: 70px;
+    height: 53px;
+    padding-top: 9px;
+}
+.table__sum {
+    padding-left: 15px;
+    box-sizing: border-box;
+    width: 96px;
+}
+.table__total {
+    width: 40px;
+    padding-left: 2px;
+}
+ul:first-child > .table__name {
+    background: url("../img/cart-purchase-1.png") no-repeat 24px top;
+}
+ul:last-child > .table__name {
+    background: url("../img/cart-purchase-2.png") no-repeat 25px top;
+}
+.cart__table li a {
+    text-decoration: none;
+    color: #323232;
+}
+/*
+.cart-field {
+    position: absolute;
+    width: 540px;
+    box-sizing: border-box;
+    top: 36px;
+    right: 0px;
+    z-index: 15;
+    background-color: #f8f7f4;
+    color: #323232;
+    padding: 0 15px 0 17px;
+    border-radius: 6px;
+}
+.cart-field__position {
+    padding-top: 16px;
+    width: 290px;
+
+}
+.cart-field__purchase {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 71px;
+    height: 54px;
+
+}
+.cart-field__purchase span {
+
+}
+.cart-field__purchase:first-child {
+    background: url("../img/cart-purchase-1.png") no-repeat 24px top;
+}
+.cart-field__purchase:last-child {
+    background: url("../img/cart-purchase-2.png") no-repeat 24px top;
+}
+*/
 /*==============================
           MAIN
 ==============================*/
@@ -765,39 +854,6 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
 .site-wrapper::after {
     background-image: url("../img/bg-ice-cream-2.png");
 }
-/*
-.sliders {
-    position: relative;
-    height: 100%;
-}
-.slider::after {
-    position: absolute;
-    display: block;
-    content: "";
-    background: #cff6e1;
-    box-shadow:0 0 10px #cff6e1;
-    top: 0;
-}
-.slider__title {
-    width: 670px;
-    margin: 0 auto;
-    padding-top: 331px;
-    padding-bottom: 135px;
-    text-align: center;
-}
-.slide__btn {
-    position: absolute;
-    width: 222px;
-    display: block;
-    bottom: 42px;
-    left: 433px;
-    font-size: 32px;
-    padding: 0 29px;
-    height: 63px;
-    line-height: 63px;
-    border-radius: 35px;
-}
-*/
 /*==============================
              BANNERS
 ==============================*/
