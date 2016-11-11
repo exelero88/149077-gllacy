@@ -63,7 +63,10 @@ footer {
     margin: 0 auto;
 }*/
 .btn {
+<<<<<<< HEAD
     cursor: pointer;
+=======
+>>>>>>> origin/master
     color: #fff;
     vertical-align: middle;
     text-decoration: none;
@@ -223,7 +226,10 @@ footer {
 .user__item {
     position: relative;
     float: left;
+<<<<<<< HEAD
     z-index: 5;
+=======
+>>>>>>> origin/master
     margin-right: 10px;
     padding-bottom: 5px;
 }
@@ -247,6 +253,7 @@ footer {
     border-radius: 50%;
     font-size: 0;
     background: rgba(255, 255, 255, 0.2) url("../img/icon-search.png") no-repeat 7px 7px;
+<<<<<<< HEAD
 }
 .user__login {
     width: 92px;
@@ -318,6 +325,84 @@ footer {
     display: inline-block;
     border: 1px solid #d4d4d3;
     font-size: 14px;
+=======
+}
+.user__login {
+    width: 92px;
+    padding-left: 44px;
+    background: rgba(255, 255, 255, 0.2) url("../img/icon-enter.png") no-repeat 16px 6px;
+}
+.user__cart {
+    width: 117px;
+    padding-left: 45px;
+    background: rgba(255, 255, 255, 0.2) url("../img/icon-cart.png") no-repeat 16px 6px;
+}
+.user__search:hover {
+    width: 32px;
+    background: #f8f7f4 url("../img/icon-search-black.png") no-repeat 7px 7px;
+}
+.user__login:hover {
+    background: #f8f7f4 url("../img/icon-enter-black.png") no-repeat 16px 6px;
+    color: #323232;
+}
+.user__cart--catalog {
+    background: #f7f6f3 url("../img/icon-cart-full.png") no-repeat 16px 6px;
+    color: #323232;
+}
+.user__item:hover .user__search {
+    background: #f8f7f4 url("../img/icon-search-black.png") no-repeat 7px 7px;
+}
+.user__item:hover .user__login {
+    background: #f8f7f4 url("../img/icon-enter-black.png") no-repeat 16px 6px;
+    color: #323232;
+}
+/*==============================
+    ВСПЛЫВАЮЩАЯ ФОРМА ПОИСКА
+==============================*/
+.search-field {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 20;
+    background-color: #f8f7f4;
+    padding: 20px 15px;
+    border-radius: 5px;
+}
+.search-field input[type="text"] {
+    width: 320px;
+    height: 40px;
+    border: 1px solid #d3d3d2;
+    padding-left: 14px;
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    outline: none;
+}
+.user__item:hover .search-field {
+    display: block;
+}
+/*==============================
+  ВСПЛЫВАЮЩЕЕ ОКНО АВТОРИЗАЦИИ
+==============================*/
+.login-field {
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    background-color: #f8f7f4;
+    padding: 20px 15px 11px 19px;
+    border-radius: 6px;
+    width: 277px;
+    top: 36px;
+    right: -2px;
+    z-index: 15;
+}
+.login-field input[type="text"] {
+    display: inline-block;
+    border: 1px solid #d4d4d3;
+    font-size: 14px;
+>>>>>>> origin/master
     width: 213px;
     height: 42px;
     padding: 0 13px;
@@ -355,6 +440,7 @@ footer {
 /*==============================
   ВСПЛЫВАЮЩЕЕ ОКНО КОРЗИНА
 ==============================*/
+<<<<<<< HEAD
 .cart-field {
     position: absolute;
     display: none;
@@ -421,6 +507,45 @@ footer {
 }
 .table__sum span {
     color: #999999;
+=======
+.cart__table {
+    right: 0;
+    display: table;
+    position: absolute;
+    width: 540px;
+    color: #323232;
+    z-index: 15;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    background-color: #f8f7f4;
+    padding: 20px 15px 0 17px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.cart__table > ul {
+    display: table-row;
+}
+.cart__table  > ul > li {
+    display: table-cell;
+
+}
+.table__name {
+    box-sizing: border-box;
+    width: 286px;
+    padding-left: 70px;
+    height: 53px;
+    padding-top: 9px;
+}
+.table__sum {
+    padding-left: 15px;
+    box-sizing: border-box;
+    width: 96px;
+}
+.table__total {
+    width: 40px;
+    padding-left: 2px;
+>>>>>>> origin/master
 }
 ul:first-child > .table__name {
     background: url("../img/cart-purchase-1.png") no-repeat 24px top;
@@ -432,6 +557,7 @@ ul:last-child > .table__name {
     text-decoration: none;
     color: #323232;
 }
+<<<<<<< HEAD
 .table__amount {
     position: absolute;
     right: 0;
@@ -456,6 +582,46 @@ ul:last-child > .table__name {
 .user__item:hover .cart-field {
     display: block;
 }
+=======
+/*
+.cart-field {
+    position: absolute;
+    width: 540px;
+    box-sizing: border-box;
+    top: 36px;
+    right: 0px;
+    z-index: 15;
+    background-color: #f8f7f4;
+    color: #323232;
+    padding: 0 15px 0 17px;
+    border-radius: 6px;
+}
+.cart-field__position {
+    padding-top: 16px;
+    width: 290px;
+
+}
+.cart-field__purchase {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 71px;
+    height: 54px;
+
+}
+.cart-field__purchase span {
+
+}
+.cart-field__purchase:first-child {
+    background: url("../img/cart-purchase-1.png") no-repeat 24px top;
+}
+.cart-field__purchase:last-child {
+    background: url("../img/cart-purchase-2.png") no-repeat 24px top;
+}
+*/
+>>>>>>> origin/master
 /*==============================
           MAIN
 ==============================*/
@@ -496,6 +662,7 @@ ul:last-child > .table__name {
 ==============================*/
 .breadcrumbs__wrapper {
     margin-top: 34px;
+<<<<<<< HEAD
 }
 .breadcrumbs__link {
     position: relative;
@@ -504,6 +671,16 @@ ul:last-child > .table__name {
     margin-right: 4px;
     margin-left: 4px;
 }
+=======
+}
+.breadcrumbs__link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+>>>>>>> origin/master
 .breadcrumbs__link span {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: 400;
@@ -526,6 +703,7 @@ ul:last-child > .table__name {
 .filter__general {
     margin-top:2px;
     margin-bottom: 26px;
+<<<<<<< HEAD
 }
 .filter__title {
     font-size: 14px;
@@ -638,6 +816,120 @@ select:hover {
 .radio__title {
     padding-left: 14px;
 }
+=======
+}
+.filter__title {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+/*==============================
+             SELECT
+==============================*/
+.select {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 13px;
+}
+.select__title {
+    padding-left: 17px;
+}
+select {
+    position: relative;
+    border: none;
+    color: #fff;
+    width: 193px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    line-height: 18px;
+    border-radius: 19px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.2)
+                url("../img/select-marker.png") no-repeat right 14px top 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+option {
+    color: #323232;
+}
+select::before {
+    content: "";
+    top: 0;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 10px solid red;
+}
+select:hover {
+    color: #323232;
+    background: #fff url("../img/select-marker-black.png") no-repeat right 14px top 50%;
+}
+/*==============================
+             RANGE
+==============================*/
+.range {
+    width: 218px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 11px;
+}
+.range__title {
+    padding-left: 14px;
+}
+.range__controls {
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.range__scale {
+    margin: 0 auto;
+    width: 188px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.range__bar {
+    width: 60%;
+    height: 4px;
+    background: rgba(255, 255, 255, 1);
+    margin-left: 22px;
+}
+.range__toogle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.range__toogle:hover {
+    transform: scale(1.1);
+}
+.range__toogle--min {
+    top: 8px;
+    left: 34px;
+}
+.range__toogle--max {
+    top: 8px;
+    right: 66px;
+}
+/*==============================
+             RADIO
+==============================*/
+.radio {
+    width: 415px;
+    display: inline-block;
+    vertical-align: top;
+}
+.radio__title {
+    padding-left: 14px;
+}
+>>>>>>> origin/master
 .radio__wrapper{
     background: rgba(255, 255, 255, 0.2);
     padding: 7px 15px 7px;
@@ -825,6 +1117,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     left: -1px;
     bottom: 50px;
     font-size: 0;
+<<<<<<< HEAD
 }
 .slider__controls label {
     display: inline-block;
@@ -835,6 +1128,18 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     cursor: pointer;
     margin-right: 8px;
 }
+=======
+}
+.slider__controls label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
+}
+>>>>>>> origin/master
 #btn-1:checked ~ .site-wrapper #slide1,     /*ПЕРЕКЛЮЧАЕТ ЗАГОЛОВОК*/
 #btn-2:checked ~ .site-wrapper #slide2,
 #btn-3:checked ~ .site-wrapper #slide3 {
@@ -944,9 +1249,12 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     padding: 6px 13px 0;
     vertical-align: top;
 }
+<<<<<<< HEAD
 .product__wrapper--active {                    /*Активный элемент*/
     background-color: rgba(255, 255, 255, 0.3);
 }
+=======
+>>>>>>> origin/master
 .product__btn-wrapper {
     display: none;
     position: absolute;
@@ -959,6 +1267,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+<<<<<<< HEAD
 .product__btn-wrapper--active {                /*Активный элемент*/
     position: absolute;
     background-color: rgba(255, 255, 255, 0.3);
@@ -970,6 +1279,8 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+=======
+>>>>>>> origin/master
 .product__price {
     font-size: 45px;
     position: absolute;
