@@ -60,7 +60,8 @@
                             <div class="search-field">
                                 <form action="get">
                                     <label for="srch">
-                                        <input type="text" id="srch" placeholder="Что ищем?">
+                                        <input type="text" id="srch" placeholder="Что ищем?" required>
+                                        <span class="search-field__hint">Что ищем?</span>
                                     </label>
                                 </form>
                             </div>
@@ -70,11 +71,11 @@
                             <div class="login-field">
                                 <form action="get">
                                     <label class="login-field__label" for="">
-                                        <input type="text" name="" id="" placeholder="Электронная почта">
+                                        <input type="text" name="" id="" placeholder="Электронная почта" required>
                                         <span class="login-field__hint">Электронная почта</span>
                                     </label>
                                     <label class="login-field__label" for="">
-                                        <input type="text" name="" id="" placeholder="Пароль">
+                                        <input type="text" name="" id="" placeholder="Пароль" required>
                                         <span class="login-field__hint">Пароль</span>
                                     </label>
                                 </form>
@@ -234,7 +235,7 @@
                                 </p>
                                 <form action="get" class="content__right_form">
                                     <label for="k1">
-                                        <input type="text" id="k1" placeholder="Электронная почта">
+                                        <input type="text" id="k1" placeholder="Электронная почта" required>
                                         <span class="content__right_hint">Электронная почта</span>
                                     </label>
                                     <button class="btn content__btn" type="submit">Отправить</button>
@@ -311,16 +312,17 @@
                     <form action="">
 
                         <label class="feedback__label" for="r1">
-                            <input name="name" type="text" placeholder="Как вас зовут?" id="r1" onblur=";">
-                            <span class="feedback__hint">Как вас зовут?</span>
+                            <input name="name" type="text" placeholder="Как вас зовут?" id="r1" required>
+                            <span class="feedback__hint feedback__hint--valid">Как вас зовут?</span>
                         </label>
 
                         <label for="r2">
-                            <input type="text" placeholder="Ваша почта для ответа?" id="r2">
+                            <input type="text" placeholder="Ваша почта для ответа?" id="r2" required>
                             <span class="feedback__hint">Ваша почта для ответа?</span>
                         </label>
+
                         <label for="">
-                        <textarea class="feedback__area" name="name" rows="8" cols="55" placeholder="Напишите что-нибудь..."></textarea>
+                        <textarea class="feedback__area" name="name" rows="8" cols="55" placeholder="Напишите что-нибудь..." required></textarea>
                             <span class="feedback__area--hint">Напишите что-нибудь...</span>
                         </label>
                         <button class="btn feedback__btn">Отправить</button>
