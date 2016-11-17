@@ -58,9 +58,6 @@ input[type="text"]:hover {
 input[type="text"]:focus {
     box-shadow: 0 0 0 2px #8fbdec;
 }
-label {
-    position: relative;
-}
 .clearfix:after {
     content: "";
     display: table;
@@ -332,7 +329,8 @@ label {
     width: 322px;
     height: 42px;
     padding-left: 14px;
-    color: #999;
+    color: #000000;
+    font-weight: bold;
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
@@ -344,18 +342,18 @@ label {
     position: absolute;
     visibility: hidden;
     font-size: 11px;
-    font-weight: bold;
-    color: #5b9ddf;
-    top: -32px;
-    left: 15px;
 }
-.search-field input[type="text"]:valid + .search-field__hint {
+input[class="search-field__srch"]:valid + .search-field__hint {
     visibility: visible;
     color: #999999;
+    top: -1px;
+    left: 27px;
 }
-.search-field input[type="text"]:focus + .search-field__hint {
+input[class="search-field__srch"]:focus + .search-field__hint {
     visibility: visible;
     color: #5b9ddf;
+    top: -1px;
+    left: 27px;
 }
 /*==============================
   ВСПЛЫВАЮЩЕЕ ОКНО АВТОРИЗАЦИИ
@@ -416,18 +414,33 @@ label {
     font-size: 11px;
     visibility: hidden;
     position: absolute;
-    top: -31px;
-    left: 12px;
+    top: 0;
+    left: 0;
 }
-.login-field input[type="text"]:valid + .login-field__hint {
+input[class="login-field__email"]:valid + .login-field__hint {
     visibility: visible;
     color: #999999;
+    top: -1px;
+    left: 32px;
 }
-.login-field input[type="text"]:focus + .login-field__hint {
+input[class="login-field__email"]:focus + .login-field__hint {
     visibility: visible;
     color: #5b9ddf;
+    top: -1px;
+    left: 32px;
 }
-
+.input[class="login-field__psw"]:valid + .login-field__hint {
+    visibility: visible;
+    color: #999999;
+    top: 61px;
+    left: 32px;
+}
+input[class="login-field__psw"]:focus + .login-field__hint {
+    visibility: visible;
+    color: #5b9ddf;
+    top: 61px;
+    left: 32px;
+}
 /*==============================
   ВСПЛЫВАЮЩЕЕ ОКНО КОРЗИНА
 ==============================*/
@@ -1241,6 +1254,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     font-weight: 400;
     border-radius: 6px;
     padding-bottom: 32px;
+    position: relative;
 }
 .content__right_text {
     padding: 28px 21px 0;
@@ -1254,7 +1268,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     margin-top: 36px;
     margin-left: 21px;
     padding-left: 14px;
-    color: #999;
+    color: #000000;
 }
 .content__btn {
     border: none;
@@ -1263,21 +1277,22 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
 /*подсказка при focus*/
 
 .content__right--hint{
-    color: #5b9ddf;
     font-weight: bold;
     font-size: 11px;
     visibility: hidden;
     position: absolute;
-    top: -32px;
-    left: 34px;
 }
-.content__col_right input[type="text"]:valid + .content__right--hint {
+input[class="content__email"]:valid + .content__right--hint {
     color: #999999;
     visibility: visible;
+    top: 108px;
+    left: 30px;
 }
-.content__col_right input[type="text"]:focus + .content__right--hint {
+input[class="content__email"]:focus + .content__right--hint {
     color: #5b9ddf;
     visibility: visible;
+    top: 108px;
+    left: 30px;
 }
 /*==============================
             КАРТА
@@ -1438,7 +1453,6 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     position: relative;
 }
 .footer-dev__img {
-    /*padding-left: 75px;*/
     position: absolute;
     top: 18px;
     left: 78px;
@@ -1543,7 +1557,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    color: #000;
+    color: #000000;
     padding-left: 14px;
     padding-right: 14px;
 }
@@ -1558,7 +1572,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     border-radius: 6px;
     font-size: 16px;
     line-height: 24px;
-    color: #000;
+    color: #000000;
     position: relative;
 }
 .feedback__area:hover {
@@ -1588,32 +1602,48 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     font-size: 11px;
     visibility: hidden;
     position: absolute;
-    top: -32px;
-    left: 15px;
 }
-.feedback input[type="text"]:valid + .feedback__hint{
+input[class="feedback__name"]:valid + .feedback__hint{
     color: #999999;
     visibility: visible;
+    top: 42px;
+    left: 40px;
 }
-.feedback input[type="text"]:focus + .feedback__hint {
+input[class="feedback__name"]:focus + .feedback__hint {
     color: #5b9ddf;
     visibility: visible;
+    top: 42px;
+    left: 40px;
+}
+input[class="feedback__email"]:valid + .feedback__hint{
+    color: #999999;
+    visibility: visible;
+    top: 106px;
+    left: 40px;
+}
+input[class="feedback__email"]:focus + .feedback__hint {
+    color: #5b9ddf;
+    visibility: visible;
+    top: 106px;
+    left: 40px;
 }
 .feedback__area--hint {
     color: #5b9ddf;
     font-size: 11px;
     visibility: hidden;
     position: absolute;
-    top: -159px;
-    left: 15px;
 }
 .feedback__area:valid + .feedback__area--hint {
     color: #999999;
     visibility: visible;
+    top: 170px;
+    left: 40px;
 }
 .feedback__area:focus + .feedback__area--hint {
     color: #5b9ddf;
     visibility: visible;
+    top: 170px;
+    left: 40px;
 }
 /*убираем placeholder при focus*/
 input:focus:-moz-placeholder {
@@ -1623,20 +1653,33 @@ input:focus::-webkit-input-placeholder {
     color:transparent;
 }
 input:-moz-placeholder {
-    color:#ccc;
+    color: #999999;
+}
+input::-moz-placeholder {
+    color: #999999;
 }
 input::-webkit-input-placeholder {
-    color:#ccc;
+    color: #999999;
+}
+input[type="text"]:-ms-input-placeholder {
+    color: #999999;
+}
+textarea:-ms-input-placeholder {
+    color: #999999;
 }
 textarea:focus:-moz-placeholder {
-    color:transparent;
+    color: transparent;
 }
 textarea:focus::-webkit-input-placeholder {
-    color:transparent;
+    color: transparent;
 }
-textarea:-moz-placeholder {
-    color:#ccc;
+textarea::-moz-placeholder {
+    color: #999999;
 }
 textarea::-webkit-input-placeholder {
-    color:#ccc;
+    color: #999999;
+}
+/*Убирает треугольник у select*/
+select::-ms-expand {
+    display: 999999;
 }
