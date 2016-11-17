@@ -44,3 +44,21 @@ function init () {
         myMap.behaviors.disable('scrollZoom');
 
 }
+
+function toggle () {
+    bigMap = !bigMap;
+
+    // Добавляем/убираем CSS-класс, определяющий размеры контейнера карты,
+    // заданные в абсолютных единицах (300x200 px).
+    if (bigMap) {
+        $('#map').removeClass('smallMap');
+    } else {
+        $('#map').addClass('smallMap');
+    }
+
+    // Если выставлен флаг, сообщаем карте, что ей следует
+    // привести свои размеры к размерам контейнера.
+    if ($('#checkbox').prop('checked')) {
+        myMap.container.fitToViewport();
+    }
+}
