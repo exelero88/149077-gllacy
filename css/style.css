@@ -1262,7 +1262,7 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
 }
 /*подсказка при focus*/
 
-.content__right_hint{
+.content__right--hint{
     color: #5b9ddf;
     font-weight: bold;
     font-size: 11px;
@@ -1271,11 +1271,11 @@ input[type="checkbox"]:disabled + .checkbox__indicator:hover {
     top: -32px;
     left: 34px;
 }
-.content__col_right input[type="text"]:valid + .content__right_hint {
+.content__col_right input[type="text"]:valid + .content__right--hint {
     color: #999999;
     visibility: visible;
 }
-.content__col_right input[type="text"]:focus + .content__right_hint {
+.content__col_right input[type="text"]:focus + .content__right--hint {
     color: #5b9ddf;
     visibility: visible;
 }
