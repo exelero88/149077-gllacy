@@ -24,7 +24,7 @@ function init () {
             // Сдвиг метки
         var myPlacemark = new ymaps.Placemark([59.938631, 30.323055] , {
             hintContent: 'Магазин мороженого - Gllacy',
-            balloonContent: 'Это красивая метка'
+            balloonContent: 'Мы находимся тут!'
         },
         {
             // Опции.
@@ -45,20 +45,26 @@ function init () {
 
 }
 
-function toggle () {
-    bigMap = !bigMap;
 
-    // Добавляем/убираем CSS-класс, определяющий размеры контейнера карты,
-    // заданные в абсолютных единицах (300x200 px).
-    if (bigMap) {
-        $('#map').removeClass('smallMap');
-    } else {
-        $('#map').addClass('smallMap');
-    }
+var link = document.querySelector(".index-map__btn");
+var popup = document.querySelector(".feedback");
+var close = popup.querySelector(".feedback__closed");
+var overlay = document.querySelector(".overlay");
 
-    // Если выставлен флаг, сообщаем карте, что ей следует
-    // привести свои размеры к размерам контейнера.
-    if ($('#checkbox').prop('checked')) {
-        myMap.container.fitToViewport();
-    }
-}
+link.addEventListener("click", function(event) {
+    event.preventDefault();
+    popup.classList.add("feedback-show-js");
+    overlay.classList.add("overlay-js");
+});
+
+close.addEventListener("click", function(event) {
+    event.preventDefault();
+    popup.classList.remove("feedback-show-js");
+    overlay.classList.remove("overlay-js");
+})
+
+overlay.addEventListener("click", function(event) {
+    event.preventDefault();
+    overlay.classList.remove("overlay-js");
+    popup.classList.remove("feedback-show-js");
+})
