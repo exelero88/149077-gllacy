@@ -60,7 +60,7 @@
                             <div class="search-field">
                                 <form action="get">
                                     <label for="srch">
-                                        <input type="text" id="srch" placeholder="Что ищем?" required>
+                                        <input class="search-field__srch" type="text" id="srch" placeholder="Что ищем?" required>
                                         <span class="search-field__hint">Что ищем?</span>
                                     </label>
                                 </form>
@@ -70,12 +70,12 @@
                             <a href="" class="user__link user__login">Вход</a>
                             <div class="login-field">
                                 <form action="get">
-                                    <label class="login-field__label" for="">
-                                        <input type="text" name="" id="" placeholder="Электронная почта" required>
+                                    <label class="login-field__label">
+                                        <input class="login-field__email" type="text" name="eml" placeholder="Электронная почта" required>
                                         <span class="login-field__hint">Электронная почта</span>
                                     </label>
-                                    <label class="login-field__label" for="">
-                                        <input type="text" name="" id="" placeholder="Пароль" required>
+                                    <label class="login-field__label">
+                                        <input class="login-field__psw" type="text" name="psw" placeholder="Пароль" required>
                                         <span class="login-field__hint">Пароль</span>
                                     </label>
                                 </form>
@@ -224,7 +224,10 @@
                     <div class="content clearfix">
                         <div class="content__col content__col_left">
                             <p class="content__title">Новое в нашем блоге</p>
-                            <a class="content__link" href="">10 &nbsp;способов сервировки фруктовых щербетов к столу</a>
+                            <a class="content__link" href="">
+                                <span>10 &nbsp;способов сервировки фруктовых щербетов к столу
+                                </span>
+                            </a>
                         </div>
                         <div class="content__col content__col_right">
                             <div class="content__right_info">
@@ -234,9 +237,9 @@
                                     слать всякой не нужной ерунды. Честно =)
                                 </p>
                                 <form action="get" class="content__right_form">
-                                    <label for="k1">
-                                        <input type="text" id="k1" placeholder="Электронная почта" required>
-                                        <span class="content__right_hint">Электронная почта</span>
+                                    <label>
+                                        <input class="content__email" type="text" placeholder="Электронная почта" required>
+                                        <span class="content__right--hint">Электронная почта</span>
                                     </label>
                                     <button class="btn content__btn" type="submit">Отправить</button>
                                 </form>
@@ -246,24 +249,24 @@
                 </main>
             </div> <!--1200px -->
             <div class="index-map">
-                    <div id="map" class="map">
-                        <div class="container-map">
-                            <div class="index-map__info">
-                                <p class="index-map__address">
-                                    Адрес главного офиса и<br>офлайн магазина:<br>
-                                    <span>
-                                        ул. Большая Конюшенная <br>19/8, Санкт-Петербург
-                                    </span>
-                                </p>
-                                <p class="index-map__phone-number">
-                                    Для заказов по телефону:<br>
-                                    <a href="tel:+7-812-450-25-25">8 812 450-25-25</a>
-                                    <span>(с 10 до 20 ежедневно)</span>
-                                </p>
-                                <a href="#" class="btn index-map__btn">Форма обратной связи</a>
-                            </div>
+                <div id="map" class="map">
+                    <div class="container-map">
+                        <div class="index-map__info">
+                            <p class="index-map__address">
+                                Адрес главного офиса и<br>офлайн магазина:<br>
+                                <span>
+                                    ул. Большая Конюшенная <br>19/8, Санкт-Петербург
+                                </span>
+                            </p>
+                            <p class="index-map__phone-number">
+                                Для заказов по телефону:<br>
+                                <a href="tel:+7-812-450-25-25">8 812 450-25-25</a>
+                                <span>(с 10 до 20 ежедневно)</span>
+                            </p>
+                            <a href="#" class="btn index-map__btn">Форма обратной связи</a>
                         </div>
                     </div>
+                </div>
             </div>
             <div class="content-wrapper">
                 <footer class="footer clearfix"> <!--FOOTER -->
@@ -309,20 +312,20 @@
                 <div class="feedback-wrapper">
                     <div class="feedback__title">Мы обязательно вам ответим!</div>
                     <a class="feedback__closed" href=""></a>
-                    <form action="">
+                    <form action="get">
 
-                        <label class="feedback__label" for="r1">
-                            <input name="name" type="text" placeholder="Как вас зовут?" id="r1" required>
+                        <label>
+                            <input class="feedback__name" name="name" type="text" placeholder="Как вас зовут?" required>
                             <span class="feedback__hint feedback__hint--valid">Как вас зовут?</span>
                         </label>
 
-                        <label for="r2">
-                            <input type="text" placeholder="Ваша почта для ответа?" id="r2" required>
+                        <label>
+                            <input class="feedback__email" type="text" placeholder="Ваша почта для ответа?" required>
                             <span class="feedback__hint">Ваша почта для ответа?</span>
                         </label>
 
-                        <label for="">
-                        <textarea class="feedback__area" name="name" rows="8" cols="55" placeholder="Напишите что-нибудь..." required></textarea>
+                        <label>
+                            <textarea class="feedback__area" name="name" rows="8" cols="55" placeholder="Напишите что-нибудь..." required></textarea>
                             <span class="feedback__area--hint">Напишите что-нибудь...</span>
                         </label>
                         <button class="btn feedback__btn">Отправить</button>
