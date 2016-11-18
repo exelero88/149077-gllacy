@@ -45,17 +45,22 @@ function init () {
 
 }
 
-
-var link = document.querySelector(".index-map__btn");
-var popup = document.querySelector(".feedback");
-var close = popup.querySelector(".feedback__closed");
-var overlay = document.querySelector(".overlay");
+var link = document.querySelector(".index-map__btn");   /*Событие на кнопке*/
+var popup = document.querySelector(".feedback");        /*Всплывающее окно*/
+var close = popup.querySelector(".feedback__closed"); /*Закрыть форму*/
+var overlay = document.querySelector(".overlay");   /*Оверлей*/
+var form = popup.querySelector("form");
+var login = popup.querySelector("[name=login]"); /*Фокус на поле логин*/
+var email = popup.querySelector("[name=email]");
+/*var storage = localStorage.getItem("login");*/
 
 link.addEventListener("click", function(event) {
     event.preventDefault();
     popup.classList.add("feedback-show-js");
     overlay.classList.add("overlay-js");
-});
+    login.focus();
+    console.log("Нужно ввести логин и пароль");
+})
 
 close.addEventListener("click", function(event) {
     event.preventDefault();
@@ -63,8 +68,26 @@ close.addEventListener("click", function(event) {
     overlay.classList.remove("overlay-js");
 })
 
-overlay.addEventListener("click", function(event) {
+overlay.addEventListener("click", function(
+    event) {
     event.preventDefault();
     overlay.classList.remove("overlay-js");
     popup.classList.remove("feedback-show-js");
+})
+
+form.addEventListener("submit", function(event) {
+    if (!login.value || !email.value) {
+        event.preventDefault();
+        console.log("Нужно ввести логин и пароль");
+    } else {
+        localStorage.setItem("login", login.value);
+    }
+})
+
+window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+        if (popup.classList.contains("feedback-show-js") || overlay.classList.contains("overlay-js")) {
+            popup.classList.remove("feedback-show-js") || overlay.classList.remove("overlay-js");
+        }
+    }
 })
