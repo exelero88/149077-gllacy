@@ -5,7 +5,7 @@
         <title>Gllacy - магазин мороженого.</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body>
          <input type="radio" id="btn-1" name="toogle" checked>
@@ -17,7 +17,6 @@
                     <div class="logo">
                         <img class="logo__img" src="img/logo.png" width="154" height="64" alt="Gllacy">
                     </div>
-
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
@@ -48,7 +47,6 @@
                             </li>
                         </ul>
                     </nav>
-
                     <div class="user clearfix">
                         <div class="user__item">
                             <a href="" class="user__link user__search">Поиск</a>
@@ -77,8 +75,8 @@
                                 <div>
                                     <a href="" class="btn login-field__btn">Войти</a>
                                     <p class="login-field__help" >
-                                        <a class="login-field__link link" href="">Забыли пароль?</a>
-                                        <a class="login-field__link link" href="">Новая регистрация</a>
+                                        <a class="login-field__link" href="">Забыли пароль?</a>
+                                        <a class="login-field__link" href="">Новая регистрация</a>
                                     </p>
                                 </div>
                             </div>
@@ -135,40 +133,51 @@
                         </div>
                     </div>
 
-                    <div class="product"><!---
+
+                    <div class="product">
+                        <div class="product__container"><!---
                         ---><div class="product__wrapper">
-                                <img class="product__img" src="img/ice-cream-1.png" alt="" width="267" height="267">
+                                <img src="img/ice-cream-1.png" alt="" width="267" height="267">
                                 <p class="product__price">310&#8381;<span>/кг</span></p>
-                                <p class="product__info product__hits">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                                <p class="product__info product__hits">
+                                    <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                                    </p>
                                 <div class="product__btn-wrapper">
                                     <a href="" class="btn product__btn">Быстрый просмотр</a>
                                 </div>
                             </div><!---
                          ---><div class="product__wrapper">
-                                <img class="product__img" src="img/ice-cream-2.png" alt="" width="267" height="267">
+                                <img src="img/ice-cream-2.png" alt="" width="267" height="267">
                                 <p class="product__price">380&#8381;<span>/кг</span></p>
-                                <p class="product__info  product__hits">Сливочно-кофейное с кусочками шоколада</p>
+                                <p class="product__info  product__hits">
+                                    <span>Сливочно-кофейное с кусочками шоколада</span>
+                                </p>
                                 <div class="product__btn-wrapper">
                                     <a href="" class="btn product__btn">Быстрый просмотр</a>
                                 </div>
                             </div><!---
                          ---><div class="product__wrapper">
-                                <img class="product__img" src="img/ice-cream-3.png" alt="" width="267" height="267">
+                                <img src="img/ice-cream-3.png" alt="" width="267" height="267">
                                 <p class="product__price">355&#8381;<span>/кг</span></p>
-                                <p class="product__info  product__hits">Сливочно-клубничное с присыпкой из белого шоколада
+                                <p class="product__info  product__hits">
+                                    <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
+                                </p>
                                 <div class="product__btn-wrapper">
                                     <a href="" class="btn product__btn">Быстрый просмотр</a>
                                 </div>
                             </div><!---
                         ---><div class="product__wrapper">
-                                <img class="product__img" src="img/ice-cream-4.png" alt="" width="267" height="267">
+                                <img src="img/ice-cream-4.png" alt="" width="267" height="267">
                                 <p class="product__price">415&#8381;<span>/кг</span></p>
-                                <p class="product__info  product__hits">Сливочное крем-брюле с карамельной подливкой</p>
+                                <p class="product__info  product__hits">
+                                    <span>Сливочное крем-брюле с карамельной подливкой</span>
+                                </p>
                                 <div class="product__btn-wrapper">
                                     <a href="" class="btn product__btn">Быстрый просмотр</a>
                                 </div>
                             </div><!---
                 ---></div>
+                </div>
 
                     <div class="seo">
                         <div class="seo__wrapper">
@@ -206,7 +215,7 @@
                     <div class="content clearfix">
                         <div class="content__col content__col_left">
                             <p class="content__title">Новое в нашем блоге</p>
-                            <a class="content__link" href="">10 &nbsp;способов сервировки фруктовых щербетов к столу</a>
+                            <a class="content__link" href="">10 &nbsp;способов сервировки<br> фруктовых щербетов к<br> столу</a>
                         </div>
                         <div class="content__col content__col_right">
                             <div class="content__right_info">
@@ -227,8 +236,9 @@
                     </div>
                 </main>
             </div> <!--1200px -->
-            <div class="index-map">
 
+
+            <div class="index-map">
                 <div id="map" class="map">
                     <img src="img/offline-map.jpg" alt="" width="1200" height="429" class="offline-map">
                     <div class="container-map">
